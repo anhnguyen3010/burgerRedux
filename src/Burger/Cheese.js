@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
 
+export default function Cheese({ burger }) {
+  const cheese = burger.find((item) => item.name === "cheese");
+  const amountCheese = cheese.amount;
+  const arrayCheese=[]
 
-export default function Cheese({burger}) {
-    const cheese = burger.find((item)=> item.name==='cheese')
-    console.log(cheese)
-    return (
-        
-        <div className='cheese text-center'>
-            <span className='font-weight-bold'>Amount: {cheese.amount}</span>
-        </div>
-    )
+  for(let i = 0; i < amountCheese; i++){
+    arrayCheese.push(i);
+  }
+  return (
+    <div>
+      {arrayCheese.map((item) => (
+        <div key={item} className="cheese"></div>
+      ))}
+    </div>
+  );
 }

@@ -28,23 +28,20 @@ export default function Burger() {
           <Beef burger={burger}/>
           <Salad burger={burger}/>
         </div>
-        <div className="breadBottom d-flex align-items-center justify-content-center">
-            <h3 style={{color:'#333'}}>Total:{total}$</h3>
+        <div className="breadBottom">
+            
         </div> 
       </div>
-      <div className='col-sm-6'>
+      <div className='col-sm-6 text-center'>
         <Menu burger={burger} menu={menu}/>
-      </div>
-      <div className='container text-center p-4'>
+        <h3 style={{color:'#333'}}>Total:{total}$</h3>
         <Button color='success'
         className='px-4'
           onClick={handleOrder}
-
         >
           Order
           </Button>
       </div>
-
     </div>
   );
 }

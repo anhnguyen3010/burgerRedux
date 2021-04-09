@@ -46,7 +46,7 @@ export default function Menu({burger,menu}) {
                   <p className='text-success'>Total: {menu[item.name]*item.amount}</p>
               </CardTitle>
               <CardText></CardText>
-              <div className="d-flex">
+              <div className="d-flex justify-content-center">
                 <Button color="success" className="mr-2"
                 onClick={()=>handleIncrease(item)}
                 >

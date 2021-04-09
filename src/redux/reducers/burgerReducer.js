@@ -36,6 +36,7 @@ function burgerReducer(state = initialState, action) {
         if (item.name === action.payload.name) {
           item.amount += 1;
         }
+        console.log(item)
         return item;
       });
 
