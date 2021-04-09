@@ -3,16 +3,16 @@ import React from 'react'
 export default function Salad({burger}) {
     const salad = burger.find((item) => item.name === "salad");
   const amountSalad = salad.amount;
-  const arraySalad=[]
-
-  for(let i = 0; i < amountSalad; i++){
-    arraySalad.push(i);
+  const saladContent = () =>{
+    let arraySalad=[];
+    for(let i = 0; i< amountSalad; i++){
+      arraySalad.push(<div key={i} className="salad"></div>);
+    }
+    return arraySalad;
   }
   return (
     <div>
-      {arraySalad.map((item) => (
-        <div key={item} className="salad"></div>
-      ))}
+      {saladContent()}
     </div>
   );
 }
